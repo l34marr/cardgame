@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import PlayingCard from './components/PlayingCard'
+import './App.scss';
 
-function App() {
+const App = () => {
+  //const num1 = Math.floor(Math.random() * Math.floor(13));
+
+
+  const generateRandom = () => {
+    return Math.floor(Math.random() * 13) + 1
+  }
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-header">
+        <div className="title">Hi Welcome to the card game</div>
+        <div className="columns">
+          <div className="column">
+            <PlayingCard generateRandom={generateRandom}  player="Saniya"/>
+          </div>
+          <div className="column">
+            <PlayingCard generateRandom={generateRandom}  player="Daddy"/>
+          </div>
+      </div>
+
     </div>
   );
 }
