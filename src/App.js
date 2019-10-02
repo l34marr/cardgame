@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import PlayingCard from './components/PlayingCard'
+import Stars from './components/Stars'
 import './App.scss';
 
 const App = () => {
@@ -20,7 +21,9 @@ const App = () => {
           <div className="column">
             <PlayingCard generateRandom={generateRandom} player="Saniya" />
           </div>
-          <div className="column"></div>
+          <div className="column">
+            <Stars />
+          </div>
           <div className="column">
             <PlayingCard generateRandom={generateRandom} player="Daddy" />
           </div>
@@ -29,12 +32,12 @@ const App = () => {
       <section className="section">
         <div className="columns">
           <div className="column">
-            <p className="has-text-white is-uppercase has-text-primary has-text-centered">Saniya Score</p>
+            <p className="has-text-white is-uppercase has-text-danger has-text-centered">Saniya Score</p>
             <hr />
           </div>
           <div className="column"></div>
           <div className="column">
-            <p className="has-text-white is-uppercase has-text-danger has-text-centered">Daddy Score</p>
+            <p className="has-text-white is-uppercase has-text-primary has-text-centered">Daddy Score</p>
             <hr />
           </div>
         </div>
