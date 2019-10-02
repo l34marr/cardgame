@@ -12,19 +12,34 @@ const App = () => {
   }
 
 
-
-
   return (
-    <div className="App-header">
-        <div className="title">Hi Welcome to the card game</div>
+    <div className="container">
+      <section className="section">
+        <div className="title has-text-white">Hi Welcome to the card game</div>
         <div className="columns">
           <div className="column">
-            <PlayingCard generateRandom={generateRandom}  player="Saniya"/>
+            <PlayingCard generateRandom={generateRandom} player="Saniya" />
           </div>
+          <div className="column"></div>
           <div className="column">
-            <PlayingCard generateRandom={generateRandom}  player="Daddy"/>
+            <PlayingCard generateRandom={generateRandom} player="Daddy" />
           </div>
-      </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="columns">
+          <div className="column">
+            <p className="has-text-white is-uppercase has-text-primary has-text-centered">Saniya Score</p>
+            <hr />
+          </div>
+          <div className="column"></div>
+          <div className="column">
+            <p className="has-text-white is-uppercase has-text-danger has-text-centered">Daddy Score</p>
+            <hr />
+          </div>
+        </div>
+
+      </section>
 
     </div>
   );

@@ -1,26 +1,4 @@
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
 
 @charset "utf-8";
 
@@ -33,6 +11,7 @@ $pink: #fa7c91;
 $brown: #757763;
 $beige-light: #d0d1cd;
 $beige-lighter: #eff0eb;
+$black: #282c34;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Nunito', sans-serif;
@@ -44,7 +23,8 @@ $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+// $body-background-color: $beige-lighter;
+$body-background-color: $black;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
