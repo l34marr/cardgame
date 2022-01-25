@@ -4,7 +4,7 @@ const PlayingCard = (props) => {
 
     return (
         <div>
-          <img src={require(`../cards/${props.num}${props.color}.svg`)} />
+          <img src={require(`../cards/${props.color}${props.num}.jpg`)} />
         </div>
     );
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import PlayingCard from './components/PlayingCard'
 import Stars from './components/Stars'
 import './App.scss';
@@ -7,7 +6,7 @@ import './App.scss';
 const App = () => {
   //const num1 = Math.floor(Math.random() * Math.floor(13));
 
-  const colors = ['S', 'H', 'C', 'D']
+  const colors = ['bdm', 'bdf']
   const [ saniyaScore, setSaniyaScore ] = useState(0);
   const [ daddyScore, setDaddyScore ] = useState(0);
   const [ saniyaNum, setSaniyaNum ] = useState(1);
@@ -17,9 +16,9 @@ const App = () => {
 
 
   const randomColorAndNumber = () => {
-    const colors = ['S', 'H', 'C', 'D']
-    setSaniyaNum(Math.floor(Math.random() * 13) + 1)
-    setDaddyNum(Math.floor(Math.random() * 13) + 1)
+    const colors = ['bdm', 'bdf']
+    setSaniyaNum(Math.floor(Math.random() * 10) + 1)
+    setDaddyNum(Math.floor(Math.random() * 10) + 1)
     setSaniyaColor(colors[Math.floor(Math.random() * colors.length)])
     setDaddyColor(colors[Math.floor(Math.random() * colors.length)])
     if (saniyaNum > daddyNum) {
@@ -35,7 +34,7 @@ const App = () => {
   return (
     <div className="container">
       <section className="section">
-        <div className="title has-text-white">Hi Welcome to the card game</div>
+        <div className="title has-text-white">WealthFlow Sand Table</div>
         <div className="columns">
           <div className="column">
             <PlayingCard num={saniyaNum} player="Saniya" color={saniyaColor} />
