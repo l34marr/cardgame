@@ -7,7 +7,7 @@ const App = () => {
   //const num1 = Math.floor(Math.random() * Math.floor(13));
 
   const colors = ['bdm', 'bdf']
-  const divStyle = { margin: '0 10px 10px' };
+  const divStyle = { fontSize: 'x-large', margin: '0px 10px 25px 0px', width: '45%' };
   const [ saniyaScore, setSaniyaScore ] = useState(0);
   const [ daddyScore, setDaddyScore ] = useState(0);
   const [ saniyaNum, setSaniyaNum ] = useState(1);
@@ -89,17 +89,17 @@ const App = () => {
         <div className="title has-text-white">WealthFlow Sand Table</div>
         <div className="columns">
           <div className="column">
-            <button className="button is-warning" onClick={drawSidelineJob} style={divStyle}>SidelineJob</button>
-            <button className="button is-warning" onClick={drawFinance} style={divStyle}>Finance</button>
-            <button className="button is-warning" onClick={drawRealEstate} style={divStyle}>RealEstate</button>
-            <button className="button is-warning" onClick={drawCorporate} style={divStyle}>Corporate</button>
-            <button className="button is-warning" onClick={drawAwareness} style={divStyle}>Awareness</button>
-            <button className="button is-warning" onClick={drawQuotes} style={divStyle}>Quotes</button>
-            <button className="button is-warning" onClick={drawBlindDateMan} style={divStyle}>BlindDateMan</button>
-            <button className="button is-warning" onClick={drawBlindDateWoman} style={divStyle}>BlindDateWoman</button>
-            <button className="button is-warning" onClick={drawCounterFlow} style={divStyle}>CounterFlow</button>
-            <button className="button is-warning" onClick={drawCharity} style={divStyle}>Charity</button>
-            <button className="button is-warning" onClick={drawProject} style={divStyle}>Project</button>
+            <button className="button is-warning" onClick={drawSidelineJob} style={divStyle}>副業</button>
+            <button className="button is-warning" onClick={drawFinance} style={divStyle}>金融</button>
+            <button className="button is-warning" onClick={drawRealEstate} style={divStyle}>地產</button>
+            <button className="button is-warning" onClick={drawCorporate} style={divStyle}>企業</button>
+            <button className="button is-warning" onClick={drawAwareness} style={divStyle}>覺察</button>
+            <button className="button is-warning" onClick={drawQuotes} style={divStyle}>行情</button>
+            <button className="button is-warning" onClick={drawBlindDateMan} style={divStyle}>相親男</button>
+            <button className="button is-warning" onClick={drawBlindDateWoman} style={divStyle}>相親女</button>
+            <button className="button is-warning" onClick={drawCounterFlow} style={divStyle}>逆流</button>
+            <button className="button is-warning" onClick={drawCharity} style={divStyle}>慈善</button>
+            <button className="button is-warning" onClick={drawProject} style={divStyle}>項目</button>
           </div>
           <div className="column">
             <PlayingCard num={daddyNum} player="Daddy" color={daddyColor}/>
