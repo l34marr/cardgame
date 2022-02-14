@@ -7,6 +7,7 @@ const App = () => {
   //const num1 = Math.floor(Math.random() * Math.floor(13));
 
   const colors = ['bdm', 'bdf']
+  const divStyle = { margin: '0 10px' };
   const [ saniyaScore, setSaniyaScore ] = useState(0);
   const [ daddyScore, setDaddyScore ] = useState(0);
   const [ saniyaNum, setSaniyaNum ] = useState(1);
@@ -30,6 +31,18 @@ const App = () => {
     console.log(saniyaScore)
   }
 
+  const drawBlindDateMan = () => {
+    const colors = ['bdm']
+    setDaddyNum(Math.floor(Math.random() * 10) + 1)
+    setDaddyColor(colors[Math.floor(Math.random() * colors.length)])
+  }
+
+  const drawBlindDateWoman = () => {
+    const colors = ['bdf']
+    setDaddyNum(Math.floor(Math.random() * 10) + 1)
+    setDaddyColor(colors[Math.floor(Math.random() * colors.length)])
+  }
+
 
   return (
     <div className="container">
@@ -37,47 +50,14 @@ const App = () => {
         <div className="title has-text-white">WealthFlow Sand Table</div>
         <div className="columns">
           <div className="column">
-            <PlayingCard num={saniyaNum} player="Saniya" color={saniyaColor} />
-          </div>
-          <div className="column">
-            <button className="button is-warning" onClick={randomColorAndNumber}>Play</button>
+            <button className="button is-warning" onClick={drawBlindDateMan} style={divStyle}>BlindDate Man</button>
+            <button className="button is-warning" onClick={drawBlindDateWoman}>BlindDate Woman</button>
           </div>
           <div className="column">
             <PlayingCard num={daddyNum} player="Daddy" color={daddyColor}/>
           </div>
         </div>
       </section>
-      <section className="section">
-        <div className="columns">
-          <div className="column">
-            <p className="has-text-white is-uppercase has-text-danger has-text-centered">Daddy</p>
-            <hr />
-            <div className="columns">
-              <div className="column">
-                <p className="is-size-1 has-text-white has-text-centered">{saniyaScore}</p>
-              </div>
-              <div className="column">
-                <p className="is-size-1 has-text-centered">{ saniyaScore > daddyScore ? <Stars /> : null}</p>
-              </div>
-            </div>
-          </div>
-          <div className="column"></div>
-          <div className="column">
-            <p className="has-text-white is-uppercase has-text-primary has-text-centered">Child</p>
-            <hr />
-            <div className="columns">
-              <div className="column">
-                <p className="is-size-1 has-text-white has-text-centered">{daddyScore}</p>
-              </div>
-              <div className="column">
-                <p className="is-size-1 has-text-centered">{ daddyScore > saniyaScore ? <Stars /> : null}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
     </div>
   );
 }
