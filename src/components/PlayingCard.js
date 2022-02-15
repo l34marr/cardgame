@@ -4,7 +4,7 @@ const PlayingCard = (props) => {
 
     return (
         <div>
-          <img src={require(`../cards/${props.cgr}${props.num}.jpg`)} width='65%' alt='Display Card' />
+          <img src={require(`../cards/${props.cgr}${props.num}.jpg`)} alt='Display Card' />
         </div>
     );
 }

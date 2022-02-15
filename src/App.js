@@ -6,8 +6,8 @@ const App = () => {
 
   const cgrs = ['default']
   const divStyle = { fontSize: 'x-large', margin: '0px 10px 25px 0px', width: '45%' };
-  const [ curStage, setCurStage ] = useState('stw');
-  const [ curCards, setCurCards ] = useState([]);
+  // const [ curStage, setCurStage ] = useState('stw');
+  // const [ curCards, setCurCards ] = useState([]);
   const [ cardNum, setCardNum ] = useState(1);
   const [ cardCgr, setCardCgr ] = useState(cgrs[Math.floor(Math.random() * cgrs.length)]);
 
@@ -82,7 +82,7 @@ const App = () => {
   return (
     <div className="container">
       <section className="section">
-        <div className="title has-text-white">WealthFlow Sand Table</div>
+        <div className="title has-text-white">WealthFlow</div>
         <div className="columns">
           <div className="column">
             <button className="button is-warning" onClick={drawSideline} style={divStyle}>副業</button>
